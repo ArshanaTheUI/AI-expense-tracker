@@ -1,6 +1,7 @@
 import React from 'react';
 import useExpenseStore from "../store/useExpenseStore";
 import { useState } from "react";
+import EditTransactionModal from "../components/Transaction/EditTransactionModal";
 const ViewDetails = () => {
         const [sortBy, setSortBy] = useState("latest");
       
@@ -28,7 +29,7 @@ const ViewDetails = () => {
       <h1>Expense Details</h1>
       <section className="details-card">
           <div className="bg-white rounded-lg shadow p-5">
-                       {
+                       {/* {
                            editingTransaction && (
                                <div className="bg-white p-5 rounded shadow mb-5">
                                    <h2 className="font-bold mb-4">
@@ -80,8 +81,11 @@ const ViewDetails = () => {
                                    </button>
                                </div>
                            )
-                       }
-       
+                       } */}
+       <EditTransactionModal
+  editingTransaction={editingTransaction}
+  setEditingTransaction={setEditingTransaction}
+/>
        
                        <input
                            type="text"
@@ -113,7 +117,7 @@ const ViewDetails = () => {
                            <option value="10">Nov</option>
                            <option value="11">Dec</option>
                        </select>
-                       <h2 className="text-xl font-bold mb-4">
+                       {/* <h2 className="text-xl font-bold mb-4">
                            Recent Transactions
                        </h2>
                        <button
@@ -124,9 +128,9 @@ const ViewDetails = () => {
                        >
                            Export CSV
                        </button>
+        */}
        
-       
-       
+{/*        
                        <div className="flex gap-3 mb-4">
                            <input
                                type="date"
@@ -146,7 +150,7 @@ const ViewDetails = () => {
                                className="border p-2 rounded"
                            />
                        </div>
-       
+        */}
        
        
                        <select

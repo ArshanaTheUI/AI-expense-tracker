@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Layout/Sidebar";
 
 import Dashboard from "./pages/Dashboard";
-import Income from "./pages/Income";
-import Expenses from "./pages/Expenses";
+// import Income from "./pages/Income";
+// import Expenses from "./pages/Expenses";
 import Categories from "./pages/Categories";
 import Reports from "./pages/Reports";
 import Budgets from "./pages/Budgets";
@@ -16,6 +16,8 @@ import Accounts from "./pages/Accounts";
 import Transfer from "./pages/Transfer";
 import Analytics from "./pages/Analytics";
 import AIAssistant from "./pages/AIAssistant";
+import AddTransaction from "./pages/AddTransaction";
+
 function App() {
 return ( <div className="flex h-screen overflow-y-auto  "> <Sidebar />
 
@@ -24,8 +26,12 @@ return ( <div className="flex h-screen overflow-y-auto  "> <Sidebar />
 
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/income" element={<Income />} />
-      <Route path="/expenses" element={<Expenses />} />
+      {/* <Route path="/income" element={<Income />} />
+      <Route path="/expenses" element={<Expenses />} /> */}
+      <Route
+  path="/add-transaction"
+  element={<AddTransaction />}
+/>
       <Route path="/categories" element={<Categories />} />
       <Route path="/reports" element={<Reports />} />
 

@@ -2,8 +2,12 @@ import { NavLink } from "react-router-dom";
 export default function Sidebar() {
 const menus = [
 { name: "Dashboard", path: "/" },
-{ name: "Income", path: "/income" },
-{ name: "Expenses", path: "/expenses" },
+// { name: "Income", path: "/income" },
+// { name: "Expenses", path: "/expenses" },
+{
+  name: "Add Transaction",
+  path: "/add-transaction",
+},
 { name: "Categories", path: "/categories" },
 { name: "Reports", path: "/reports" },
 {
